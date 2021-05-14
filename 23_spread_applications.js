@@ -102,8 +102,19 @@ console.log(user);
 
 const user = {
     username : "nico",
-    ...(lastName !=="" && lastName),
-    //이 두가지 조건은 모두 true여야만 한다. 라는 의미
+    ...(lastName !=="" && {lastName}),
+
+    /*--------------- 선택적인 속성값 (optional object property) ---------------
+
+        이 두가지 조건은 모두 true여야만 한다. 라는 의미
+        - lastName이 빈 문자열이 아닐때 첫번째 조건은 true여야만 함
+        - 그리고 첫번째 조건이 true 면 lastName이 들어가게 되는 것.
+
+        * lastName의 value도 lastName이니까그냥 줄여서 lastName이라고 쓰면됨
+        (shorthand property)
+
+        ...이 이 조건의 결과를 전개시킬 것.
+    */
     age : 24
 };
 
